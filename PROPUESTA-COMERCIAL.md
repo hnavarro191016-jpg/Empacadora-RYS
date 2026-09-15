@@ -56,3 +56,7 @@ La información sobre certificados y sellos fue proporcionada por el cliente y n
 ## Estado de la landing
 
 Propuesta privada para revisión. La solicitud genera un resumen copiable; no envía datos a la empresa ni confirma pedidos. No hay precios o contactos inventados. La imagen gastronómica fue generada con IA y se identifica como ilustrativa.
+
+### Identidad institucional incorporada
+
+La sección “Quiénes somos” incluye la misión, visión y los seis valores proporcionados en las imágenes del cliente: calidad, responsabilidad, honestidad, trabajo en equipo, innovación y servicio. El texto se conserva, con separación en párrafos para facilitar la lectura. Estos documentos institucionales no sustituyen la documentación de certificados y sellos pendiente de incorporar.
