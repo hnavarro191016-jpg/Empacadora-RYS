@@ -60,3 +60,11 @@ Propuesta privada para revisión. La solicitud genera un resumen copiable; no en
 ### Identidad institucional incorporada
 
 La sección “Quiénes somos” incluye la misión, visión y los seis valores proporcionados en las imágenes del cliente: calidad, responsabilidad, honestidad, trabajo en equipo, innovación y servicio. El texto se conserva, con separación en párrafos para facilitar la lectura. Estos documentos institucionales no sustituyen la documentación de certificados y sellos pendiente de incorporar.
+
+### Ficha de producto incorporada
+
+El cliente compartió una ficha previa y confirmó que sigue vigente el 15 de septiembre de 2026. Se incorporaron la descripción, origen mexicano, ingredientes (zanahoria y jalapeño como opcionales), tabla nutricional aproximada por 100 g, conservación, distribución e identificación del lote. La cifra de 15 años de experiencia se tomó de esta ficha confirmada. La representante indicada en el documento es Juliana Saydalí Vera Rivera; no se agregó un canal de contacto sin datos comerciales.
+
+La referencia original de refrigeración de 0 a 12 °C queda pendiente de revisión técnica: la NOM-251-SSA1-2009, numeral 5.5.2, establece una temperatura máxima de 7 °C para los equipos de refrigeración. Esto no valida un rango específico para este producto. El sitio remite a las indicaciones de conservación del empaque y no publica el rango de 0 a 12 °C. Referencia: https://dof.gob.mx/normasOficiales/3980/salud.htm
+
+La ficha también declara cumplimiento con COFEPRIS, TIF y etiquetado NOM. Se conserva como información de referencia; no se agregaron nuevas afirmaciones de cumplimiento ni sellos sin identificar los documentos y su alcance.
