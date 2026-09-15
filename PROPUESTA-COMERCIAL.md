@@ -68,3 +68,13 @@ El cliente compartió una ficha previa y confirmó que sigue vigente el 15 de se
 La referencia original de refrigeración de 0 a 12 °C queda pendiente de revisión técnica: la NOM-251-SSA1-2009, numeral 5.5.2, establece una temperatura máxima de 7 °C para los equipos de refrigeración. Esto no valida un rango específico para este producto. El sitio remite a las indicaciones de conservación del empaque y no publica el rango de 0 a 12 °C. Referencia: https://dof.gob.mx/normasOficiales/3980/salud.htm
 
 La ficha también declara cumplimiento con COFEPRIS, TIF y etiquetado NOM. Se conserva como información de referencia; no se agregaron nuevas afirmaciones de cumplimiento ni sellos sin identificar los documentos y su alcance.
+
+## Actualización comercial y visual — 15 de septiembre de 2026
+
+- WhatsApp confirmado por el usuario: 81 4247 7041 (México). La página prepara una solicitud y permite abrir WhatsApp; el cliente decide enviarla.
+- El usuario eligió los valores de las etiquetas sobre la ficha anterior: por 100 g, 68 kcal, proteína 7 g, grasa 4 g, saturada 0 g, carbohidratos 1 g, azúcares 1 g, fibra menor de 1 g y sodio 487 mg. Se sustituyó la tabla anterior.
+- Referencias de etiquetas: fino 1 y 5 kg, mediano 1 y 5 kg, entero 5 kg; botanero envase de medio litro, contenido neto 400 g y masa drenada 200 g. Medio litro refiere al volumen del envase, no al peso del producto.
+- Instrucción explícita más reciente: las bolsas al vacío llevan zanahoria sin jalapeño; el botanero lleva zanahoria y jalapeño. Las etiquetas originales de bolsas aún enumeran chile jalapeño: conservar sus artes como referencia gráfica no resuelve esa discrepancia. Corregir las etiquetas de producción con la formulación final antes de imprimirlas; no se alteraron silenciosamente los originales.
+- El usuario confirma bodega para preparación y empaque, cuarto frío y camionetas refrigeradas. La imagen de instalaciones es una ilustración conceptual, no una foto del establecimiento.
+- Se incorporó el sello TIF suministrado por el usuario junto al texto TIF. No se lo atribuye a la Secretaría de Salud de Nuevo León.
+- El proyecto anterior en C:/Users/hnava/Google/rys-cueritos se revisó solo para información del producto. No agrega variantes de cuerito. Su chicharrón prensado no se incorporó al catálogo actual.
