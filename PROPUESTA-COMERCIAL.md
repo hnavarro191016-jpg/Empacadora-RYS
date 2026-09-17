@@ -84,3 +84,7 @@ La ficha también declara cumplimiento con COFEPRIS, TIF y etiquetado NOM. Se co
 - Cortes corregidos: fino en cuadritos pequeños de piel, mediano en cuadros mayores; zanahoria en cuadros.
 - El formulario abre WhatsApp al 52 81 4247 7041 con producto, cantidad y ciudad. El cliente revisa y envía; la web no confirma pedidos automáticamente.
 - Dirección recuperada del proyecto anterior: Calle Constitución 3907, Col. Jardines de San Rafael, Guadalupe, Nuevo León, C.P. 67119, México. Incluida con enlace a Maps.
+
+## Ajuste de color y composición visual
+
+Por indicación del cliente, las tres bolsas muestran piel de cerdo blanca, sin dominante amarilla, y una cantidad visual mucho menor de zanahoria. Predomina el cuerito. Esta indicación es de presentación gráfica, no una fórmula de ingredientes ni un porcentaje de composición declarado.
