@@ -54,3 +54,32 @@ Subject: dos personas pequeñas en el encuadre, con cofias, guantes y uniformes 
 Style/medium: fotografía editorial realista de arquitectura industrial alimentaria, conceptual, color natural y luz suave.
 Composition/framing: paisaje 3:2, vista amplia a altura humana; énfasis en las mesas y espacio de trabajo, personas en segundo plano.
 Constraints: no sangre, no cadáveres, no animales, no carne cruda, no matadero. No logos, no textos, no señalética escrita, no marcas, no certificados, no afirmaciones documentales, sin apariencia futurista ni escala industrial enorme.
+
+## Corrección de cortes — 17 de septiembre de 2026
+
+Las imágenes finales de fino y mediano sustituyen los cortes en tiras. El fino muestra cuadritos pequeños y delgados; el mediano, cuadros mayores. Ambos incluyen zanahoria en cuadros. Se conservaron composición, empaque y referencia de etiqueta.
+
+### Prompt común de edición de bolsas
+
+Use case: precise-object-edit
+Input image: imagen suministrada es el objetivo de edición.
+Primary request: corregir SOLO la forma del corte del cuero cocido encurtido y la zanahoria dentro de la bolsa.
+Material: auténtica piel de cerdo cocida blanca-marfil, delgada, plana, húmeda, gelatinosa y ligeramente translúcida, con textura natural sutil y bordes cortados ligeramente irregulares; cada pieza tiene dos dimensiones amplias y espesor muy pequeño, se superponen y algunas se curvan levemente de forma natural bajo el vacío. Zanahoria naranja también cortada en cuadritos planos.
+Invariantes: conservar exactamente la misma composición cuadrada, bolsa transparente compacta al vacío con bordes termosellados, arrugas y brillo realistas, posición y dimensiones de etiqueta, logo RyS, colores rojo y amarillo, peso, variedad, sello EXCESO SODIO y todo texto de etiqueta, fondo blanco y sombra suave. No rediseñar etiqueta. No añadir ingredientes verdes.
+Evitar: tiras largas, juliana, cintas, pasta, macarrones, fideos, piezas tubulares; cubos gruesos de queso, tofu, patata o gelatina, formas voluminosas sólidas, piezas secas opacas. No inventar medidas ni escribir texto nuevo.
+
+### Sufijo FINO
+
+Corte requerido FINO: MUCHOS CUADRITOS PEQUEÑOS PLANOS de piel cocida, de contorno aproximadamente cuadrado como la cara de un dado pequeño, pero muy delgados, flexibles y húmedos; NO dados tridimensionales. Zanahoria también cuadritos PEQUEÑOS planos, mezclada en cantidad semejante al original. El resultado debe distinguirse claramente del corte mediano por tener muchísimas piezas pequeñas. Mantener FINO CONTENIDO NETO 1KG.
+
+### Sufijo MEDIANO
+
+Corte requerido MEDIANO: CUADROS PLANOS de piel cocida, de tamaño claramente MAYOR que los cuadritos pequeños del corte fino, aproximadamente cuadrados en su superficie; piezas anchas y cortas, nunca alargadas, con espesor de piel delgada, flexibles, húmedas y algo translúcidas, apiladas naturalmente. Zanahoria también cuadros planos de tamaño mediano, mezclada en cantidad semejante al original. Mantener MEDIANO CONTENIDO NETO 1KG.
+
+### Bodega corregida
+
+Se reemplazó el alimento en bolsas y bandejas por cuadritos de piel y zanahoria. Se retiró el colador cuyo contenido conservaba tiras. Sigue siendo una recreación ilustrativa.
+
+Prompt del ajuste final:
+
+Use case: precise-object-edit. Edit target: the supplied photo. Make ONLY ONE LOCAL CHANGE: completely REMOVE the round perforated metal colander containing orange carrot strips at the left side of the foreground worktable, just in front of the woman and behind the front rectangular tray. Remove the entire colander, its contents and its shadow. Fill its former location with the continuous clean empty stainless steel tabletop, matching perspective, reflections, lighting and grain seamlessly. No bowl or food should remain in that spot. Preserve everything else exactly: all people, faces, hands, clothing, equipment, shelving, door, framing, light, rectangular trays and plastic bags. Preserve all small thin flat moist ivory pork-skin squares and orange carrot squares already in every tray and bag; do not change or regenerate their cuts. Landscape 3:2, photorealistic, no added objects or text.

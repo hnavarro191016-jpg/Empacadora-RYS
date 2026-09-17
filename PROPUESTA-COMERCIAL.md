@@ -78,3 +78,9 @@ La ficha también declara cumplimiento con COFEPRIS, TIF y etiquetado NOM. Se co
 - El usuario confirma bodega para preparación y empaque, cuarto frío y camionetas refrigeradas. La imagen de instalaciones es una ilustración conceptual, no una foto del establecimiento.
 - Se incorporó el sello TIF suministrado por el usuario junto al texto TIF. No se lo atribuye a la Secretaría de Salud de Nuevo León.
 - El proyecto anterior en C:/Users/hnava/Google/rys-cueritos se revisó solo para información del producto. No agrega variantes de cuerito. Su chicharrón prensado no se incorporó al catálogo actual.
+
+## Actualización del 17 de septiembre de 2026
+
+- Cortes corregidos: fino en cuadritos pequeños de piel, mediano en cuadros mayores; zanahoria en cuadros.
+- El formulario abre WhatsApp al 52 81 4247 7041 con producto, cantidad y ciudad. El cliente revisa y envía; la web no confirma pedidos automáticamente.
+- Dirección recuperada del proyecto anterior: Calle Constitución 3907, Col. Jardines de San Rafael, Guadalupe, Nuevo León, C.P. 67119, México. Incluida con enlace a Maps.

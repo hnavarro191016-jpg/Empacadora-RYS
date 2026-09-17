@@ -39,7 +39,8 @@ form.addEventListener('submit', event => {
   city.setCustomValidity(city.value.trim() ? '' : 'Escribe tu ciudad o zona de entrega.');
   if (!form.reportValidity()) return;
   prepareRequest({product: product.value, quantity: quantity.value, city: city.value});
-  summary.focus();
+  window.open(document.getElementById('send-whatsapp').href, '_blank', 'noopener,noreferrer');
+  status.textContent = 'Revisa y envía tu solicitud en WhatsApp. Si no se abrió, utiliza el enlace «Abrir en WhatsApp».';
 });
 if (document.modelContext?.registerTool) {
   const lifecycle = new AbortController();
