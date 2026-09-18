@@ -16,8 +16,11 @@
     <a class="button small dark" href="#cotizar">Cotiza con RyS <span aria-hidden="true">↗</span></a>
   </header>
   <main id="main">
-    <section class="hero" id="inicio">
-      <div class="hero-inner wrap">
+    <section class="hero" id="inicio" style="position: relative; overflow: hidden;">
+      <video autoplay loop muted playsinline style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); min-width: 100%; min-height: 100%; object-fit: cover; z-index: 0; opacity: 0.15; filter: blur(4px); pointer-events: none;">
+        <source src="assets/VideoBanner.mp4" type="video/mp4">
+      </video>
+      <div class="hero-inner wrap" style="position: relative; z-index: 1;">
         <div class="hero-copy"><p class="eyebrow">EL SABOR DE COMPARTIR</p><h1>El antojo tiene<br>su <em>buen corte.</em></h1><p class="lead">Cueritos en vinagre y botaneros.<br>Encuentra la opción para tu mesa o tu negocio.</p><a class="button light" href="#productos">Conoce nuestros productos <span aria-hidden="true">↗</span></a><p class="hero-foot">FINO · MEDIANO · ENTERO · BOTANERO</p></div>
         <figure class="hero-visual"><img src="assets/cueritos-concepto.png" width="1536" height="1024" alt="Imagen conceptual de cueritos en vinagre con vegetales en un plato negro" fetchpriority="high"><figcaption>Imagen ilustrativa · Presentación sugerida</figcaption></figure>
       </div>
