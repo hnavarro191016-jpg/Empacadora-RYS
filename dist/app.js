@@ -18,7 +18,7 @@ function prepareRequest(details) {
   city.setCustomValidity('');
   summary.value = `Hola, Empacadora RyS. Me gustaría solicitar una cotización.\n\nProducto: ${product.value}\nCantidad y presentación: ${quantity.value}\nCiudad o zona: ${city.value}\n\n¿Me comparten precio, disponibilidad y condiciones de entrega?`;
   panel.hidden = false;
-  document.getElementById('send-whatsapp').href = 'https://wa.me/528142477041?text=' + encodeURIComponent(summary.value);
+  document.getElementById('send-whatsapp').href = 'https://wa.me/528180960489?text=' + encodeURIComponent(summary.value);
   status.textContent = 'Solicitud preparada. Aún no se ha enviado.';
   return {summary: summary.value, sent: false};
 }
