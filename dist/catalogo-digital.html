@@ -1,0 +1,1082 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo Digital Oficial 2026 | Empacadora RyS</title>
+  <meta name="description" content="Catálogo digital interactivo e imprimible de Empacadora RyS. Cueritos en vinagre tradicionales en cortes fino, mediano y entero. Presentaciones de 1 kg, 5 kg y 10 kg. Calidad TIF.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23ef2b16'/%3E%3Ctext x='32' y='46' text-anchor='middle' font-family='Arial' font-weight='900' font-size='43' fill='white'%3ER%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Estilos del Catálogo Digital Editorial & Interactivo */
+    :root {
+      --cat-red: #c80c0d;
+      --cat-red-dark: #9f0809;
+      --cat-gold: #d4a34b;
+      --cat-dark: #1a1a18;
+      --cat-card-bg: #ffffff;
+      --cat-border: #e6e6e0;
+      --cat-gray-light: #f7f7f5;
+      --cat-gray-text: #595954;
+    }
+
+    body {
+      background-color: #fbfbfa;
+      color: var(--cat-dark);
+    }
+
+    /* Barra Superior y Header del Catálogo */
+    .cat-header {
+      background: #ffffff;
+      border-bottom: 1px solid var(--cat-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .cat-nav-wrap {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .cat-brand-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .cat-brand-group img {
+      height: 44px;
+      width: auto;
+    }
+
+    .cat-tagline {
+      border-left: 2px solid var(--cat-red);
+      padding-left: 12px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--cat-gray-text);
+      text-transform: uppercase;
+    }
+
+    .cat-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .btn-print {
+      background: var(--cat-gray-light);
+      color: var(--cat-dark);
+      border: 1px solid #dcdcd5;
+    }
+    .btn-print:hover {
+      background: #ededeb;
+      border-color: #b5b5ab;
+    }
+
+    .btn-quote-wa {
+      background: #25D366;
+      color: #ffffff;
+      border: 1px solid #20b858;
+    }
+    .btn-quote-wa:hover {
+      background: #20ba59;
+    }
+
+    .btn-back {
+      color: var(--cat-gray-text);
+      font-size: 0.85rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-weight: 600;
+    }
+    .btn-back:hover {
+      color: var(--cat-red);
+    }
+
+    /* Portada Editorial Hero */
+    .cat-hero {
+      background: linear-gradient(135deg, #1b1b19 0%, #2a2a26 100%);
+      color: #ffffff;
+      padding: 60px 20px;
+      position: relative;
+      overflow: hidden;
+      border-bottom: 4px solid var(--cat-red);
+    }
+
+    .cat-hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 80% 20%, rgba(200, 12, 13, 0.25) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .cat-hero-wrap {
+      max-width: 1240px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 40px;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .cat-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(200, 12, 13, 0.2);
+      border: 1px solid rgba(200, 12, 13, 0.5);
+      color: #ff8585;
+      padding: 5px 12px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      border-radius: 3px;
+      margin-bottom: 18px;
+    }
+
+    .cat-hero h1 {
+      font-size: 3.2rem;
+      line-height: 1.08;
+      font-family: 'Barlow Condensed', sans-serif;
+      text-transform: uppercase;
+      margin: 0 0 16px;
+      letter-spacing: 0.02em;
+      color: #ffffff;
+    }
+
+    .cat-hero h1 em {
+      color: #ffd277;
+      font-style: normal;
+    }
+
+    .cat-hero p.lead {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: #d1d1ca;
+      margin: 0 0 28px;
+      max-width: 580px;
+    }
+
+    .cat-badges-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 0.82rem;
+      color: #e5e5dc;
+    }
+
+    .cat-badge-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .cat-badge-item span.icon {
+      color: var(--cat-red);
+      font-size: 1.1rem;
+    }
+
+    .cat-hero-summary-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      padding: 24px;
+      backdrop-filter: blur(8px);
+    }
+
+    .cat-hero-summary-card h3 {
+      font-size: 1.1rem;
+      margin: 0 0 14px;
+      color: #ffffff;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      padding-bottom: 10px;
+    }
+
+    .cat-hero-summary-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0.88rem;
+      line-height: 1.7;
+      color: #b8b8b0;
+    }
+
+    .cat-hero-summary-card li strong {
+      color: #ffffff;
+    }
+
+    /* Barra de Navegación y Filtros de Productos */
+    .cat-controls-bar {
+      background: #ffffff;
+      border-bottom: 1px solid var(--cat-border);
+      position: sticky;
+      top: 73px;
+      z-index: 90;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+
+    .cat-controls-wrap {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .cat-filter-tabs {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .cat-tab-btn {
+      padding: 8px 16px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      border: 1px solid var(--cat-border);
+      background: #ffffff;
+      color: var(--cat-gray-text);
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .cat-tab-btn:hover {
+      background: var(--cat-gray-light);
+      color: var(--cat-dark);
+    }
+
+    .cat-tab-btn.active {
+      background: var(--cat-red);
+      color: #ffffff;
+      border-color: var(--cat-red);
+    }
+
+    .cat-view-switch {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--cat-gray-text);
+    }
+
+    .cat-view-btn {
+      padding: 6px 12px;
+      border: 1px solid var(--cat-border);
+      background: #ffffff;
+      border-radius: 4px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .cat-view-btn.active {
+      background: var(--cat-dark);
+      color: #ffffff;
+      border-color: var(--cat-dark);
+    }
+
+    /* Sección Principal del Catálogo */
+    .cat-main-content {
+      max-width: 1240px;
+      margin: 40px auto 60px;
+      padding: 0 20px;
+    }
+
+    /* Grid de Productos */
+    .cat-products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    /* Tarjeta de Producto */
+    .cat-card {
+      background: #ffffff;
+      border: 1px solid var(--cat-border);
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .cat-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+      border-color: #d0d0c8;
+    }
+
+    .cat-card-header {
+      padding: 16px 20px 12px;
+      border-bottom: 1px solid #f0f0eb;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fafaf8;
+    }
+
+    .cat-sku {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: #8c8c82;
+      text-transform: uppercase;
+    }
+
+    .cat-tag-origin {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--cat-red);
+      background: rgba(200, 12, 13, 0.08);
+      padding: 2px 7px;
+      border-radius: 3px;
+    }
+
+    /* Galería Interactiva de la Tarjeta */
+    .cat-gallery-container {
+      position: relative;
+      background: #ffffff;
+      padding: 15px;
+      text-align: center;
+      border-bottom: 1px solid #f0f0eb;
+    }
+
+    .cat-main-img-box {
+      width: 100%;
+      height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: #fbfbf9;
+      border-radius: 6px;
+      border: 1px solid #f2f2ee;
+    }
+
+    .cat-main-img-box img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+    }
+
+    .cat-card:hover .cat-main-img-box img {
+      transform: scale(1.02);
+    }
+
+    /* Selector de Presentaciones (1kg, 5kg, 10kg) */
+    .cat-size-selector {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .cat-size-pill {
+      border: 1px solid #d4d4cc;
+      background: #ffffff;
+      padding: 5px 12px;
+      border-radius: 4px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      color: var(--cat-gray-text);
+      transition: all 0.2s;
+    }
+
+    .cat-size-pill:hover {
+      border-color: var(--cat-red);
+      color: var(--cat-red);
+    }
+
+    .cat-size-pill.active {
+      background: var(--cat-red);
+      border-color: var(--cat-red);
+      color: #ffffff;
+    }
+
+    /* Cuerpo de la Tarjeta */
+    .cat-card-body {
+      padding: 22px 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cat-card-body h3 {
+      font-size: 1.4rem;
+      margin: 0 0 6px;
+      color: var(--cat-dark);
+      font-family: 'Barlow Condensed', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+    }
+
+    .cat-card-body .cat-desc {
+      font-size: 0.88rem;
+      line-height: 1.55;
+      color: var(--cat-gray-text);
+      margin: 0 0 16px;
+    }
+
+    /* Especificaciones Rápidas */
+    .cat-spec-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px;
+      border-top: 1px solid #f0f0eb;
+      padding-top: 12px;
+      font-size: 0.82rem;
+    }
+
+    .cat-spec-list li {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px 0;
+      border-bottom: 1px dashed #f0f0eb;
+      color: #6d6d66;
+    }
+
+    .cat-spec-list li strong {
+      color: var(--cat-dark);
+    }
+
+    /* Pie de Tarjeta y Botón de Cotización */
+    .cat-card-footer {
+      margin-top: auto;
+      border-top: 1px solid #f0f0eb;
+      padding-top: 16px;
+    }
+
+    .cat-btn-wa-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      background: #1b1b19;
+      color: #ffffff;
+      padding: 12px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .cat-btn-wa-card:hover {
+      background: var(--cat-red);
+    }
+
+    /* Vista de Ficha Editorial y Tabla Maestra */
+    .cat-editorial-sheet {
+      background: #ffffff;
+      border: 1px solid var(--cat-border);
+      border-radius: 8px;
+      padding: 40px;
+      margin-top: 50px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+    }
+
+    .cat-sheet-header {
+      border-bottom: 2px solid var(--cat-red);
+      padding-bottom: 18px;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .cat-sheet-header h2 {
+      font-size: 2rem;
+      font-family: 'Barlow Condensed', sans-serif;
+      text-transform: uppercase;
+      margin: 0 0 4px;
+    }
+
+    .cat-table-wrap {
+      overflow-x: auto;
+    }
+
+    .cat-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      text-align: left;
+    }
+
+    .cat-table th {
+      background: #f7f7f5;
+      padding: 12px 16px;
+      font-weight: 700;
+      border-bottom: 2px solid #e0e0d8;
+      color: var(--cat-dark);
+    }
+
+    .cat-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid #ebebea;
+      vertical-align: middle;
+    }
+
+    .cat-table tr:hover td {
+      background: #fafaf8;
+    }
+
+    /* Modal de Zoom Fotográfico */
+    .cat-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .cat-modal.open {
+      display: flex;
+    }
+
+    .cat-modal-content {
+      max-width: 900px;
+      max-height: 90vh;
+      background: #ffffff;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cat-modal-img {
+      max-width: 100%;
+      max-height: 75vh;
+      object-fit: contain;
+    }
+
+    .cat-modal-close {
+      position: absolute;
+      top: 12px;
+      right: 15px;
+      background: rgba(0,0,0,0.5);
+      color: #ffffff;
+      border: none;
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .cat-modal-caption {
+      padding: 14px 20px;
+      background: #ffffff;
+      border-top: 1px solid #ebebea;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--cat-dark);
+    }
+
+    /* REGLAS DE IMPRESIÓN Y PDF EDITORIAL PROFESIONAL */
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        font-size: 10pt;
+      }
+      .cat-header, .cat-controls-bar, .cat-actions, .cat-btn-wa-card, .btn-print, .btn-quote-wa, .cat-size-selector {
+        display: none !important;
+      }
+      .cat-hero {
+        background: none !important;
+        color: #000000 !important;
+        border-bottom: 2pt solid #c80c0d !important;
+        padding: 15pt 0 !important;
+      }
+      .cat-hero h1 {
+        color: #000000 !important;
+        font-size: 24pt !important;
+      }
+      .cat-hero h1 em {
+        color: #c80c0d !important;
+      }
+      .cat-hero p.lead, .cat-badges-row {
+        color: #333333 !important;
+      }
+      .cat-hero-summary-card {
+        border: 1pt solid #ccc !important;
+        background: none !important;
+        color: #000000 !important;
+      }
+      .cat-hero-summary-card ul, .cat-hero-summary-card h3 {
+        color: #000000 !important;
+      }
+      .cat-main-content {
+        margin: 15pt auto !important;
+        padding: 0 !important;
+      }
+      .cat-products-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 15pt !important;
+        page-break-inside: avoid;
+      }
+      .cat-card {
+        border: 1pt solid #cccccc !important;
+        box-shadow: none !important;
+        page-break-inside: avoid;
+      }
+      .cat-main-img-box {
+        height: 180pt !important;
+      }
+      .cat-editorial-sheet {
+        box-shadow: none !important;
+        border: 1pt solid #ccc !important;
+        padding: 15pt !important;
+        page-break-before: always;
+      }
+      .cat-table th {
+        background: #f0f0f0 !important;
+      }
+      .print-footer-notice {
+        display: block !important;
+        margin-top: 20pt;
+        font-size: 8pt;
+        text-align: center;
+        color: #666;
+        border-top: 1pt solid #ccc;
+        padding-top: 10pt;
+      }
+    }
+
+    .print-footer-notice {
+      display: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 980px) {
+      .cat-products-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .cat-hero-wrap {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .cat-products-grid {
+        grid-template-columns: 1fr;
+      }
+      .cat-nav-wrap {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .cat-actions {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .cat-hero h1 {
+        font-size: 2.3rem;
+      }
+      .cat-controls-bar {
+        top: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra de Encabezado Comercial -->
+  <header class="cat-header">
+    <div class="cat-nav-wrap">
+      <div class="cat-brand-group">
+        <a href="index.html" class="btn-back" title="Regresar al sitio principal">← Volver al Inicio</a>
+        <a href="index.html"><img src="assets/logo-rys.png" alt="Empacadora RyS"></a>
+        <div class="cat-tagline">Catálogo Oficial 2026</div>
+      </div>
+      <div class="cat-actions">
+        <button class="btn-action btn-print" onclick="window.print()">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          Descargar / Imprimir PDF
+        </button>
+        <a class="btn-action btn-quote-wa" href="https://wa.me/528180960489?text=Hola%2C%20Empacadora%20RyS.%20Revis%C3%A9%20el%20Cat%C3%A1logo%20Digital%20y%20deseo%20cotizar%20por%20mayoreo." target="_blank" rel="noopener noreferrer">
+          <span>💬 Cotizar por WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Portada Editorial Hero -->
+  <section class="cat-hero">
+    <div class="cat-hero-wrap">
+      <div class="cat-hero-content">
+        <div class="cat-hero-badge">Cuerito Tradicional de Cerdo · Certificación TIF</div>
+        <h1>Línea de Cuerito<br>en Vinagre <em>RyS</em></h1>
+        <p class="lead">Selección rigurosa de piel de cerdo cocida, limpia y encurtida bajo procesos artesanales e higiénicos. Textura crujiente, acidez balanceada y máxima frescura garantizada.</p>
+        <div class="cat-badges-row">
+          <div class="cat-badge-item"><span class="icon">✓</span> <strong>Cortes:</strong> Fino · Mediano · Entero</div>
+          <div class="cat-badge-item"><span class="icon">✓</span> <strong>Presentaciones:</strong> 1 Kg · 5 Kg · 10 Kg</div>
+          <div class="cat-badge-item"><span class="icon">✓</span> <strong>Caducidad:</strong> 6 meses refrigerado</div>
+          <div class="cat-badge-item"><span class="icon">✓</span> <strong>Distribución:</strong> Cadena de Frío</div>
+        </div>
+      </div>
+      <div class="cat-hero-summary-card">
+        <h3>Respaldo y Especificaciones</h3>
+        <ul>
+          <li><strong>Empresa:</strong> Empacadora RyS (15 años de experiencia)</li>
+          <li><strong>Certificaciones:</strong> Respaldo TIF / Secretaría de Salud NL</li>
+          <li><strong>Empaque:</strong> Bolsa termo-sellada grado alimenticio</li>
+          <li><strong>Uso sugerido:</strong> Botanas, tostadas, chicharrones preparados y venta mayorista</li>
+          <li><strong>Atención comercial:</strong> 81 8096 0489</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Barra de Filtros y Vistas -->
+  <div class="cat-controls-bar">
+    <div class="cat-controls-wrap">
+      <div class="cat-filter-tabs">
+        <button class="cat-tab-btn active" data-filter="all">Todos los Cortes (3)</button>
+        <button class="cat-tab-btn" data-filter="fino">Corte Fino</button>
+        <button class="cat-tab-btn" data-filter="mediano">Corte Mediano</button>
+        <button class="cat-tab-btn" data-filter="entero">Corte Entero</button>
+      </div>
+      <div class="cat-view-switch">
+        <span>Presentación global:</span>
+        <button class="cat-view-btn" data-global-size="1kg">1 KG</button>
+        <button class="cat-view-btn active" data-global-size="5kg">5 KG</button>
+        <button class="cat-view-btn" data-global-size="10kg">10 KG</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contenedor Principal del Catálogo -->
+  <main class="cat-main-content">
+
+    <div class="cat-products-grid" id="products-container">
+
+      <!-- PRODUCTO 1: CORTE FINO -->
+      <article class="cat-card" data-category="fino" id="card-fino">
+        <div class="cat-card-header">
+          <span class="cat-sku">SKU: RYS-CV-FIN</span>
+          <span class="cat-tag-origin">100% MEXICANO · TIF</span>
+        </div>
+        <div class="cat-gallery-container">
+          <div class="cat-main-img-box" onclick="openZoom('cuerito-fino', 'Cuerito en Vinagre · Corte Fino')">
+            <img id="img-fino" src="assets/catalogo/cuerito-fino-5kg.jpg" alt="Cuerito en vinagre corte fino Empacadora RyS">
+          </div>
+          <div class="cat-size-selector">
+            <button class="cat-size-pill" onclick="changeProductSize('fino', '1kg', 'assets/catalogo/cuerito-fino-1kg.jpg', this)">1 KG</button>
+            <button class="cat-size-pill active" onclick="changeProductSize('fino', '5kg', 'assets/catalogo/cuerito-fino-5kg.jpg', this)">5 KG</button>
+            <button class="cat-size-pill" onclick="changeProductSize('fino', '10kg', 'assets/catalogo/cuerito-fino-10kg.jpg', this)">10 KG</button>
+          </div>
+        </div>
+        <div class="cat-card-body">
+          <h3>Cuerito Corte Fino</h3>
+          <p class="cat-desc">Cuadritos pequeños de cuerito con zanahoria picada. El corte predilecto para tostadas, vasos botaneros y chicharrones preparados gracias a su distribución uniforme.</p>
+          <ul class="cat-spec-list">
+            <li><span>Presentación activa:</span> <strong id="spec-weight-fino">5 Kilogramos</strong></li>
+            <li><span>Tipo de corte:</span> <strong>Cuadro fino uniforme</strong></li>
+            <li><span>Ingredientes:</span> <strong>Piel de cerdo, vinagre, sal, zanahoria</strong></li>
+            <li><span>Conservación:</span> <strong>Manténgase en refrigeración (≤10°C)</strong></li>
+            <li><span>Código de barras:</span> <strong id="spec-barcode-fino">7500465505117</strong></li>
+          </ul>
+          <div class="cat-card-footer">
+            <a class="cat-btn-wa-card" id="wa-btn-fino" href="https://wa.me/528180960489?text=Hola%2C%20quisiera%20cotizar%20Cuerito%20en%20Vinagre%20Corte%20Fino%20en%20presentaci%C3%B3n%20de%205%20KG" target="_blank" rel="noopener noreferrer">
+              Cotizar Corte Fino (5 KG) ↗
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PRODUCTO 2: CORTE MEDIANO -->
+      <article class="cat-card" data-category="mediano" id="card-mediano">
+        <div class="cat-card-header">
+          <span class="cat-sku">SKU: RYS-CV-MED</span>
+          <span class="cat-tag-origin">100% MEXICANO · TIF</span>
+        </div>
+        <div class="cat-gallery-container">
+          <div class="cat-main-img-box" onclick="openZoom('cuerito-mediano', 'Cuerito en Vinagre · Corte Mediano')">
+            <img id="img-mediano" src="assets/catalogo/cuerito-mediano-5kg.jpg" alt="Cuerito en vinagre corte mediano Empacadora RyS">
+          </div>
+          <div class="cat-size-selector">
+            <button class="cat-size-pill" onclick="changeProductSize('mediano', '1kg', 'assets/catalogo/cuerito-mediano-1kg.jpg', this)">1 KG</button>
+            <button class="cat-size-pill active" onclick="changeProductSize('mediano', '5kg', 'assets/catalogo/cuerito-mediano-5kg.jpg', this)">5 KG</button>
+            <button class="cat-size-pill" onclick="changeProductSize('mediano', '10kg', 'assets/catalogo/cuerito-mediano-10kg.jpg', this)">10 KG</button>
+          </div>
+        </div>
+        <div class="cat-card-body">
+          <h3>Cuerito Corte Mediano</h3>
+          <p class="cat-desc">Cuadros medianos tradicionales con textura firme y mordida crocante. Mezclado con cubos de zanahoria encurtida en vinagre sazonado tradicional.</p>
+          <ul class="cat-spec-list">
+            <li><span>Presentación activa:</span> <strong id="spec-weight-mediano">5 Kilogramos</strong></li>
+            <li><span>Tipo de corte:</span> <strong>Cuadro estándar comercial</strong></li>
+            <li><span>Ingredientes:</span> <strong>Piel de cerdo, vinagre, sal, zanahoria</strong></li>
+            <li><span>Conservación:</span> <strong>Manténgase en refrigeración (≤10°C)</strong></li>
+            <li><span>Código de barras:</span> <strong id="spec-barcode-mediano">7502251481384</strong></li>
+          </ul>
+          <div class="cat-card-footer">
+            <a class="cat-btn-wa-card" id="wa-btn-mediano" href="https://wa.me/528180960489?text=Hola%2C%20quisiera%20cotizar%20Cuerito%20en%20Vinagre%20Corte%20Mediano%20en%20presentaci%C3%B3n%20de%205%20KG" target="_blank" rel="noopener noreferrer">
+              Cotizar Corte Mediano (5 KG) ↗
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- PRODUCTO 3: CORTE ENTERO -->
+      <article class="cat-card" data-category="entero" id="card-entero">
+        <div class="cat-card-header">
+          <span class="cat-sku">SKU: RYS-CV-ENT</span>
+          <span class="cat-tag-origin">100% MEXICANO · TIF</span>
+        </div>
+        <div class="cat-gallery-container">
+          <div class="cat-main-img-box" onclick="openZoom('cuerito-entero', 'Cuerito en Vinagre · Corte Entero')">
+            <img id="img-entero" src="assets/catalogo/cuerito-entero-5kg.jpg" alt="Cuerito en vinagre corte entero Empacadora RyS">
+          </div>
+          <div class="cat-size-selector">
+            <button class="cat-size-pill" onclick="changeProductSize('entero', '1kg', 'assets/catalogo/cuerito-entero-1kg.jpg', this)">1 KG</button>
+            <button class="cat-size-pill active" onclick="changeProductSize('entero', '5kg', 'assets/catalogo/cuerito-entero-5kg.jpg', this)">5 KG</button>
+            <button class="cat-size-pill" onclick="changeProductSize('entero', '10kg', 'assets/catalogo/cuerito-entero-10kg.jpg', this)">10 KG</button>
+          </div>
+        </div>
+        <div class="cat-card-body">
+          <h3>Cuerito Corte Entero</h3>
+          <p class="cat-desc">Láminas enteras y cortes amplios de piel de cerdo cocida con zanahoria encurtida. Formato de alto rendimiento para negocios que requieren porcionar según su propia receta.</p>
+          <ul class="cat-spec-list">
+            <li><span>Presentación activa:</span> <strong id="spec-weight-entero">5 Kilogramos</strong></li>
+            <li><span>Tipo de corte:</span> <strong>Láminas enteras amplias</strong></li>
+            <li><span>Ingredientes:</span> <strong>Piel de cerdo, vinagre, sal, zanahoria</strong></li>
+            <li><span>Conservación:</span> <strong>Manténgase en refrigeración (≤10°C)</strong></li>
+            <li><span>Código de barras:</span> <strong id="spec-barcode-entero">7500465505117</strong></li>
+          </ul>
+          <div class="cat-card-footer">
+            <a class="cat-btn-wa-card" id="wa-btn-entero" href="https://wa.me/528180960489?text=Hola%2C%20quisiera%20cotizar%20Cuerito%20en%20Vinagre%20Corte%20Entero%20en%20presentaci%C3%B3n%20de%205%20KG" target="_blank" rel="noopener noreferrer">
+              Cotizar Corte Entero (5 KG) ↗
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- FICHA TÉCNICA MAESTRA Y TABLA DE ESPECIFICACIONES (Ideal para Compradores Mayoristas) -->
+    <section class="cat-editorial-sheet" id="tabla-tecnica">
+      <div class="cat-sheet-header">
+        <div>
+          <span style="color: var(--cat-red); font-size: 0.75rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">Control de Calidad e Inocuidad</span>
+          <h2>Tabla Técnica Comparativa de Presentaciones</h2>
+        </div>
+        <span style="font-size: 0.82rem; color: var(--cat-gray-text);">Normativa Oficial Mexicana NOM · Distintivo TIF</span>
+      </div>
+
+      <div class="cat-table-wrap">
+        <table class="cat-table">
+          <thead>
+            <tr>
+              <th>Corte</th>
+              <th>Presentaciones</th>
+              <th>Tipo de Empaque</th>
+              <th>Vida en Anaquel</th>
+              <th>Temperatura Óptima</th>
+              <th>Masa Drenada</th>
+              <th>Sello Sanitario</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Corte Fino</strong></td>
+              <td>1 KG · 5 KG · 10 KG</td>
+              <td>Bolsa sellada al vacío / Bolsa alimentaria con cincho</td>
+              <td>6 meses</td>
+              <td>2°C a 6°C (Refrigeración)</td>
+              <td>Aprox. 60-65% peso neto</td>
+              <td>Certificado TIF / SSA NL</td>
+            </tr>
+            <tr>
+              <td><strong>Corte Mediano</strong></td>
+              <td>1 KG · 5 KG · 10 KG</td>
+              <td>Bolsa sellada al vacío / Bolsa alimentaria con cincho</td>
+              <td>6 meses</td>
+              <td>2°C a 6°C (Refrigeración)</td>
+              <td>Aprox. 60-65% peso neto</td>
+              <td>Certificado TIF / SSA NL</td>
+            </tr>
+            <tr>
+              <td><strong>Corte Entero</strong></td>
+              <td>1 KG · 5 KG · 10 KG</td>
+              <td>Bolsa sellada al vacío / Bolsa alimentaria con cincho</td>
+              <td>6 meses</td>
+              <td>2°C a 6°C (Refrigeración)</td>
+              <td>Aprox. 60-65% peso neto</td>
+              <td>Certificado TIF / SSA NL</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div style="margin-top: 30px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; font-size: 0.85rem; color: #555; background: #fafaf8; padding: 20px; border-radius: 6px;">
+        <div>
+          <h4 style="margin: 0 0 8px; color: var(--cat-dark);">Información Nutrimental (100g)</h4>
+          <p style="margin: 0; line-height: 1.6;">Energía: 168 kcal · Proteína: 7g · Grasa: 4g · Carbohidratos: 1g · Azúcares: 1g · Sodio: 487mg.</p>
+        </div>
+        <div>
+          <h4 style="margin: 0 0 8px; color: var(--cat-dark);">Condiciones de Envío</h4>
+          <p style="margin: 0; line-height: 1.6;">Unidades refrigeradas propias con monitoreo térmico continuo en todo Nuevo León y zona metropolitana.</p>
+        </div>
+        <div>
+          <h4 style="margin: 0 0 8px; color: var(--cat-dark);">Atención a Distribuidores</h4>
+          <p style="margin: 0; line-height: 1.6;">Atención directa por WhatsApp al <strong>81 8096 0489</strong>. Precios especiales por tarima o volumen semanal.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pie de página para impresión física -->
+    <div class="print-footer-notice">
+      <p><strong>Empacadora RyS</strong> · Calle Constitución 3907, Col. Jardines de San Rafael, Guadalupe, N.L. · WhatsApp: 81 8096 0489 · www.empacadorarys.com</p>
+    </div>
+
+  </main>
+
+  <!-- Modal para Zoom de Fotos Reales -->
+  <div class="cat-modal" id="zoom-modal" onclick="closeZoom()">
+    <div class="cat-modal-content" onclick="event.stopPropagation()">
+      <button class="cat-modal-close" onclick="closeZoom()">×</button>
+      <img class="cat-modal-img" id="modal-img" src="" alt="Vista ampliada">
+      <div class="cat-modal-caption" id="modal-caption"></div>
+    </div>
+  </div>
+
+  <script>
+    // Códigos de barra según corte y peso
+    const productBarcodes = {
+      fino: { '1kg': '750025483384', '5kg': '7500465505117', '10kg': '7502251481384' },
+      mediano: { '1kg': '7500251481384', '5kg': '7502251481384', '10kg': '7502251481384' },
+      entero: { '1kg': '7500465505117', '5kg': '7500465505117', '10kg': '7500465505117' }
+    };
+
+    // Cambiar presentación en tarjeta individual
+    function changeProductSize(corte, size, imgPath, pillElement) {
+      // Cambiar imagen
+      const img = document.getElementById(`img-${corte}`);
+      if (img) img.src = imgPath;
+
+      // Actualizar pills activas
+      const parent = pillElement.parentElement;
+      parent.querySelectorAll('.cat-size-pill').forEach(p => p.classList.remove('active'));
+      pillElement.classList.add('active');
+
+      // Actualizar texto de peso y SKU
+      const weightEl = document.getElementById(`spec-weight-${corte}`);
+      const barcodeEl = document.getElementById(`spec-barcode-${corte}`);
+      const waBtn = document.getElementById(`wa-btn-${corte}`);
+
+      const sizeLabel = size === '1kg' ? '1 Kilogramo' : (size === '5kg' ? '5 Kilogramos' : '10 Kilogramos');
+      const sizeTag = size.toUpperCase();
+
+      if (weightEl) weightEl.textContent = sizeLabel;
+      if (barcodeEl && productBarcodes[corte] && productBarcodes[corte][size]) {
+        barcodeEl.textContent = productBarcodes[corte][size];
+      }
+
+      // Actualizar botón WhatsApp
+      if (waBtn) {
+        const corteName = corte.charAt(0).toUpperCase() + corte.slice(1);
+        waBtn.textContent = `Cotizar Corte ${corteName} (${sizeTag}) ↗`;
+        const text = `Hola, quisiera cotizar Cuerito en Vinagre Corte ${corteName} en presentación de ${sizeTag}.`;
+        waBtn.href = `https://wa.me/528180960489?text=${encodeURIComponent(text)}`;
+      }
+    }
+
+    // Filtrar por corte
+    document.querySelectorAll('.cat-tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.cat-tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+
+        document.querySelectorAll('.cat-card').forEach(card => {
+          if (filter === 'all' || card.dataset.category === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Selector global de tamaño (1kg, 5kg, 10kg)
+    document.querySelectorAll('[data-global-size]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('[data-global-size]').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const size = btn.dataset.globalSize;
+
+        ['fino', 'mediano', 'entero'].forEach(corte => {
+          const pill = document.querySelector(`#card-${corte} .cat-size-pill[onclick*="${size}"]`);
+          if (pill) pill.click();
+        });
+      });
+    });
+
+    // Modal de Zoom
+    function openZoom(corte, title) {
+      const modal = document.getElementById('zoom-modal');
+      const modalImg = document.getElementById('modal-img');
+      const modalCap = document.getElementById('modal-caption');
+      const currentImg = document.getElementById(`img-${corte.replace('cuerito-', '')}`);
+      
+      if (modal && currentImg) {
+        modalImg.src = currentImg.src;
+        modalCap.textContent = `${title} · Fotografía Real del Producto`;
+        modal.classList.add('open');
+      }
+    }
+
+    function closeZoom() {
+      const modal = document.getElementById('zoom-modal');
+      if (modal) modal.classList.remove('open');
+    }
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeZoom();
+    });
+  </script>
+</body>
+</html>
