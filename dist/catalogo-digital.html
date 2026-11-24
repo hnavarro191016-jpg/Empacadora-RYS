@@ -615,6 +615,10 @@
     }
 
     /* REGLAS DE IMPRESIÓN Y PDF EDITORIAL PROFESIONAL */
+    .print-header-banner {
+      display: none;
+    }
+
     @media print {
       body {
         background: #ffffff !important;
@@ -624,11 +628,29 @@
       .cat-header, .cat-controls-bar, .cat-actions, .cat-btn-wa-card, .btn-print, .btn-quote-wa, .cat-size-selector {
         display: none !important;
       }
+      .print-header-banner {
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 2pt solid #c80c0d;
+        padding-bottom: 12pt;
+        margin-bottom: 16pt;
+      }
+      .print-header-banner img {
+        height: 52pt;
+        width: auto;
+      }
+      .print-header-info {
+        text-align: right;
+        font-size: 9pt;
+        color: #333333;
+        line-height: 1.4;
+      }
       .cat-hero {
         background: none !important;
         color: #000000 !important;
         border-bottom: 2pt solid #c80c0d !important;
-        padding: 15pt 0 !important;
+        padding: 10pt 0 15pt !important;
       }
       .cat-hero h1 {
         color: #000000 !important;
@@ -675,13 +697,18 @@
         background: #f0f0f0 !important;
       }
       .print-footer-notice {
-        display: block !important;
-        margin-top: 20pt;
-        font-size: 8pt;
-        text-align: center;
-        color: #666;
-        border-top: 1pt solid #ccc;
+        display: flex !important;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 25pt;
+        font-size: 8.5pt;
+        color: #444444;
+        border-top: 1.5pt solid #c80c0d;
         padding-top: 10pt;
+      }
+      .print-footer-notice img {
+        height: 28pt;
+        width: auto;
       }
     }
 
@@ -721,6 +748,16 @@
   </style>
 </head>
 <body>
+
+  <!-- Encabezado exclusivo para Impresión y PDF Oficial con Logotipo -->
+  <div class="print-header-banner">
+    <img src="assets/logo-rys.png" alt="Empacadora RyS Logo">
+    <div class="print-header-info">
+      <strong style="font-size: 11pt; color: #c80c0d;">EMPACADORA RyS</strong><br>
+      Catálogo Digital Oficial de Productos · 2026<br>
+      WhatsApp Mayoristas: <strong>81 8096 0489</strong>
+    </div>
+  </div>
 
   <!-- Barra de Encabezado Comercial -->
   <header class="cat-header">
@@ -969,7 +1006,11 @@
 
     <!-- Pie de página para impresión física -->
     <div class="print-footer-notice">
-      <p><strong>Empacadora RyS</strong> · Calle Constitución 3907, Col. Jardines de San Rafael, Guadalupe, N.L. · WhatsApp: 81 8096 0489 · www.empacadorarys.com</p>
+      <div>
+        <strong>Empacadora RyS</strong> · Calle Constitución 3907, Col. Jardines de San Rafael, Guadalupe, N.L.<br>
+        WhatsApp: <strong>81 8096 0489</strong> · Correo: contacto@empacadorarys.com · www.empacadorarys.com
+      </div>
+      <img src="assets/logo-rys.png" alt="Empacadora RyS">
     </div>
 
   </main>
