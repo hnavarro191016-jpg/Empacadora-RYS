@@ -619,11 +619,17 @@
       display: none;
     }
 
+    @page {
+      size: letter portrait;
+      margin: 12mm 10mm 12mm 10mm;
+    }
+
     @media print {
       body {
         background: #ffffff !important;
         color: #000000 !important;
-        font-size: 10pt;
+        font-size: 8.5pt !important;
+        line-height: 1.3 !important;
       }
       .cat-header, .cat-controls-bar, .cat-actions, .cat-btn-wa-card, .btn-print, .btn-quote-wa, .cat-size-selector {
         display: none !important;
@@ -633,81 +639,186 @@
         align-items: center;
         justify-content: space-between;
         border-bottom: 2pt solid #c80c0d;
-        padding-bottom: 12pt;
-        margin-bottom: 16pt;
+        padding-bottom: 8pt;
+        margin-bottom: 10pt;
       }
       .print-header-banner img {
-        height: 52pt;
+        height: 38pt;
         width: auto;
       }
       .print-header-info {
         text-align: right;
-        font-size: 9pt;
+        font-size: 8pt;
         color: #333333;
-        line-height: 1.4;
+        line-height: 1.3;
       }
       .cat-hero {
-        background: none !important;
+        background: #fafaf8 !important;
         color: #000000 !important;
-        border-bottom: 2pt solid #c80c0d !important;
-        padding: 10pt 0 15pt !important;
+        border: 1pt solid #e0e0d8 !important;
+        border-left: 4pt solid #c80c0d !important;
+        border-radius: 4px;
+        padding: 8pt 12pt !important;
+        margin-bottom: 12pt !important;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+      .cat-hero-wrap {
+        display: grid !important;
+        grid-template-columns: 1.2fr 0.8fr !important;
+        gap: 15pt !important;
+      }
+      .cat-hero-badge {
+        display: inline-block;
+        color: #c80c0d !important;
+        background: rgba(200, 12, 13, 0.08) !important;
+        border: 1px solid rgba(200, 12, 13, 0.2) !important;
+        font-size: 6.5pt !important;
+        font-weight: 700;
+        padding: 2pt 5pt;
+        margin-bottom: 4pt;
       }
       .cat-hero h1 {
         color: #000000 !important;
-        font-size: 24pt !important;
+        font-size: 16pt !important;
+        line-height: 1.1 !important;
+        margin: 0 0 4pt !important;
       }
       .cat-hero h1 em {
         color: #c80c0d !important;
       }
-      .cat-hero p.lead, .cat-badges-row {
+      .cat-hero p.lead {
         color: #333333 !important;
+        font-size: 8pt !important;
+        line-height: 1.3 !important;
+        margin: 0 0 6pt !important;
+      }
+      .cat-badges-row {
+        color: #333333 !important;
+        font-size: 7pt !important;
+        gap: 8pt !important;
       }
       .cat-hero-summary-card {
-        border: 1pt solid #ccc !important;
-        background: none !important;
+        border: 1pt solid #dcdcd5 !important;
+        background: #ffffff !important;
         color: #000000 !important;
+        padding: 8pt !important;
+        border-radius: 4px;
       }
-      .cat-hero-summary-card ul, .cat-hero-summary-card h3 {
+      .cat-hero-summary-card h3 {
+        color: #c80c0d !important;
+        font-size: 8.5pt !important;
+        margin: 0 0 4pt !important;
+        padding-bottom: 3pt !important;
+        border-bottom: 1px solid #eee;
+      }
+      .cat-hero-summary-card ul {
+        color: #333333 !important;
+        font-size: 7.2pt !important;
+        line-height: 1.4 !important;
+      }
+      .cat-hero-summary-card li strong {
         color: #000000 !important;
       }
       .cat-main-content {
-        margin: 15pt auto !important;
+        margin: 0 !important;
         padding: 0 !important;
       }
       .cat-products-grid {
+        display: grid !important;
         grid-template-columns: repeat(3, 1fr) !important;
-        gap: 15pt !important;
-        page-break-inside: avoid;
+        gap: 10pt !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        page-break-after: always !important;
+        break-after: page !important;
       }
       .cat-card {
+        display: flex !important;
+        flex-direction: column !important;
         border: 1pt solid #cccccc !important;
         box-shadow: none !important;
-        page-break-inside: avoid;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+        margin-bottom: 0 !important;
+        border-radius: 4px;
+      }
+      .cat-card-header {
+        padding: 6pt 8pt 4pt !important;
+        font-size: 7pt;
+      }
+      .cat-gallery-container {
+        padding: 6pt !important;
       }
       .cat-main-img-box {
-        height: 180pt !important;
+        height: 125pt !important;
+        background: #ffffff !important;
+        border: none !important;
+      }
+      .cat-main-img-box img {
+        max-height: 120pt !important;
+      }
+      .cat-card-body {
+        padding: 8pt !important;
+        display: flex !important;
+        flex-direction: column !important;
+      }
+      .cat-card-body h3 {
+        font-size: 11pt !important;
+        margin: 0 0 3pt !important;
+      }
+      .cat-card-body .cat-desc {
+        font-size: 7.2pt !important;
+        line-height: 1.35 !important;
+        margin: 0 0 6pt !important;
+      }
+      .cat-spec-list {
+        font-size: 7pt !important;
+        margin: 0 !important;
+        padding-top: 4pt !important;
+      }
+      .cat-spec-list li {
+        padding: 2pt 0 !important;
       }
       .cat-editorial-sheet {
         box-shadow: none !important;
         border: 1pt solid #ccc !important;
-        padding: 15pt !important;
-        page-break-before: always;
+        padding: 14pt !important;
+        margin-top: 0 !important;
+        page-break-before: always !important;
+        break-before: page !important;
+        page-break-inside: avoid !important;
+        break-inside: avoid !important;
+      }
+      .cat-sheet-header {
+        margin-bottom: 12pt !important;
+        padding-bottom: 8pt !important;
+      }
+      .cat-sheet-header h2 {
+        font-size: 14pt !important;
+      }
+      .cat-table {
+        font-size: 7.5pt !important;
       }
       .cat-table th {
         background: #f0f0f0 !important;
+        padding: 6pt 8pt !important;
+      }
+      .cat-table td {
+        padding: 6pt 8pt !important;
       }
       .print-footer-notice {
         display: flex !important;
         align-items: center;
         justify-content: space-between;
-        margin-top: 25pt;
-        font-size: 8.5pt;
+        margin-top: 15pt;
+        font-size: 7.5pt;
         color: #444444;
         border-top: 1.5pt solid #c80c0d;
-        padding-top: 10pt;
+        padding-top: 6pt;
       }
       .print-footer-notice img {
-        height: 28pt;
+        height: 22pt;
         width: auto;
       }
     }
@@ -848,12 +959,12 @@
           <h3>Cuerito Corte Fino</h3>
           <p class="cat-desc">Cuadritos pequeños de cuerito con zanahoria picada. El corte predilecto para tostadas, vasos botaneros y chicharrones preparados gracias a su distribución uniforme.</p>
           <ul class="cat-spec-list">
-            <li><span>Presentación activa:</span> <strong id="spec-weight-fino">1 Kilogramo</strong></li>
-            <li><span>Presentaciones disponibles:</span> <strong>1 KG y 5 KG</strong></li>
+            <li><span>Presentaciones:</span> <strong>1 KG y 5 KG</strong></li>
             <li><span>Tipo de corte:</span> <strong>Cuadro fino uniforme</strong></li>
             <li><span>Ingredientes:</span> <strong>Piel de cerdo, vinagre, sal, zanahoria</strong></li>
             <li><span>Conservación:</span> <strong>Manténgase en refrigeración (≤10°C)</strong></li>
-            <li><span>Código de barras:</span> <strong id="spec-barcode-fino">7500465505117</strong></li>
+            <li><span>Código EAN 1 KG:</span> <strong>7500465505117</strong></li>
+            <li><span>Código EAN 5 KG:</span> <strong>7500465505131</strong></li>
           </ul>
           <div class="cat-card-footer">
             <a class="cat-btn-wa-card" id="wa-btn-fino" href="https://wa.me/528115187738?text=Hola%2C%20Empacadora%20RyS.%20Me%20comunico%20para%20solicitar%20informaci%C3%B3n%20y%20cotizaci%C3%B3n%20de%20Cuerito%20en%20Vinagre%20Corte%20Fino%20en%20presentaci%C3%B3n%20de%201%20KG." target="_blank" rel="noopener noreferrer">
@@ -881,12 +992,11 @@
           <h3>Cuerito Corte Mediano</h3>
           <p class="cat-desc">Cuadros medianos tradicionales con textura firme y mordida crocante. Mezclado con cubos de zanahoria encurtida en vinagre sazonado tradicional.</p>
           <ul class="cat-spec-list">
-            <li><span>Presentación activa:</span> <strong id="spec-weight-mediano">1 Kilogramo</strong></li>
             <li><span>Presentación disponible:</span> <strong>Exclusiva 1 KG</strong></li>
             <li><span>Tipo de corte:</span> <strong>Cuadro estándar comercial</strong></li>
             <li><span>Ingredientes:</span> <strong>Piel de cerdo, vinagre, sal, zanahoria</strong></li>
             <li><span>Conservación:</span> <strong>Manténgase en refrigeración (≤10°C)</strong></li>
-            <li><span>Código de barras:</span> <strong id="spec-barcode-mediano">7502251481384</strong></li>
+            <li><span>Código EAN 1 KG:</span> <strong>7502251481384</strong></li>
           </ul>
           <div class="cat-card-footer">
             <a class="cat-btn-wa-card" id="wa-btn-mediano" href="https://wa.me/528115187738?text=Hola%2C%20Empacadora%20RyS.%20Me%20comunico%20para%20solicitar%20informaci%C3%B3n%20y%20cotizaci%C3%B3n%20de%20Cuerito%20en%20Vinagre%20Corte%20Mediano%20en%20presentaci%C3%B3n%20de%201%20KG." target="_blank" rel="noopener noreferrer">
@@ -914,12 +1024,11 @@
           <h3>Cuerito Corte Entero</h3>
           <p class="cat-desc">Láminas enteras y cortes amplios de piel de cerdo cocida con zanahoria encurtida. Formato de alto rendimiento para negocios que requieren porcionar según su propia receta.</p>
           <ul class="cat-spec-list">
-            <li><span>Presentación activa:</span> <strong id="spec-weight-entero">5 Kilogramos</strong></li>
             <li><span>Presentación disponible:</span> <strong>Exclusiva 5 KG</strong></li>
             <li><span>Tipo de corte:</span> <strong>Láminas enteras amplias</strong></li>
             <li><span>Ingredientes:</span> <strong>Piel de cerdo, vinagre, sal, zanahoria</strong></li>
             <li><span>Conservación:</span> <strong>Manténgase en refrigeración (≤10°C)</strong></li>
-            <li><span>Código de barras:</span> <strong id="spec-barcode-entero">7502255840644</strong></li>
+            <li><span>Código EAN 5 KG:</span> <strong>7502255840644</strong></li>
           </ul>
           <div class="cat-card-footer">
             <a class="cat-btn-wa-card" id="wa-btn-entero" href="https://wa.me/528115187738?text=Hola%2C%20Empacadora%20RyS.%20Me%20comunico%20para%20solicitar%20informaci%C3%B3n%20y%20cotizaci%C3%B3n%20de%20Cuerito%20en%20Vinagre%20Corte%20Entero%20en%20presentaci%C3%B3n%20de%205%20KG." target="_blank" rel="noopener noreferrer">
@@ -1042,17 +1151,8 @@
       pillElement.classList.add('active');
 
       // Actualizar texto de peso y SKU
-      const weightEl = document.getElementById(`spec-weight-${corte}`);
-      const barcodeEl = document.getElementById(`spec-barcode-${corte}`);
       const waBtn = document.getElementById(`wa-btn-${corte}`);
-
-      const sizeLabel = size === '1kg' ? '1 Kilogramo' : '5 Kilogramos';
       const sizeTag = size.toUpperCase();
-
-      if (weightEl) weightEl.textContent = sizeLabel;
-      if (barcodeEl && productBarcodes[corte] && productBarcodes[corte][size]) {
-        barcodeEl.textContent = productBarcodes[corte][size];
-      }
 
       // Actualizar botón WhatsApp
       if (waBtn) {
