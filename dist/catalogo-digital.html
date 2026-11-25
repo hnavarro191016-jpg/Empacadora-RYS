@@ -788,7 +788,7 @@
         <p class="lead">Selección rigurosa de piel de cerdo cocida, limpia y encurtida bajo procesos artesanales e higiénicos. Textura crujiente, acidez balanceada y máxima frescura garantizada.</p>
         <div class="cat-badges-row">
           <div class="cat-badge-item"><span class="icon">✓</span> <strong>Cortes:</strong> Fino · Mediano · Entero</div>
-          <div class="cat-badge-item"><span class="icon">✓</span> <strong>Presentaciones:</strong> 1 Kg · 5 Kg · 10 Kg</div>
+          <div class="cat-badge-item"><span class="icon">✓</span> <strong>Presentaciones:</strong> 1 Kg y 5 Kg</div>
           <div class="cat-badge-item"><span class="icon">✓</span> <strong>Caducidad:</strong> 6 meses refrigerado</div>
           <div class="cat-badge-item"><span class="icon">✓</span> <strong>Distribución:</strong> Cadena de Frío</div>
         </div>
@@ -816,10 +816,10 @@
         <button class="cat-tab-btn" data-filter="entero">Corte Entero</button>
       </div>
       <div class="cat-view-switch">
-        <span>Presentación global:</span>
+        <span>Filtro por presentación:</span>
+        <button class="cat-view-btn active" data-global-size="all">Todas</button>
         <button class="cat-view-btn" data-global-size="1kg">1 KG</button>
-        <button class="cat-view-btn active" data-global-size="5kg">5 KG</button>
-        <button class="cat-view-btn" data-global-size="10kg">10 KG</button>
+        <button class="cat-view-btn" data-global-size="5kg">5 KG</button>
       </div>
     </div>
   </div>
@@ -830,75 +830,74 @@
     <div class="cat-products-grid" id="products-container">
 
       <!-- PRODUCTO 1: CORTE FINO -->
-      <article class="cat-card" data-category="fino" id="card-fino">
+      <article class="cat-card" data-category="fino" data-available-sizes="1kg,5kg" id="card-fino">
         <div class="cat-card-header">
           <span class="cat-sku">SKU: RYS-CV-FIN</span>
           <span class="cat-tag-origin">100% MEXICANO · TIF</span>
         </div>
         <div class="cat-gallery-container">
           <div class="cat-main-img-box" onclick="openZoom('cuerito-fino', 'Cuerito en Vinagre · Corte Fino')">
-            <img id="img-fino" src="assets/catalogo/cuerito-fino-5kg.jpg" alt="Cuerito en vinagre corte fino Empacadora RyS">
+            <img id="img-fino" src="assets/catalogo/cuerito-fino-1kg.jpg" alt="Cuerito en vinagre corte fino Empacadora RyS">
           </div>
           <div class="cat-size-selector">
-            <button class="cat-size-pill" onclick="changeProductSize('fino', '1kg', 'assets/catalogo/cuerito-fino-1kg.jpg', this)">1 KG</button>
-            <button class="cat-size-pill active" onclick="changeProductSize('fino', '5kg', 'assets/catalogo/cuerito-fino-5kg.jpg', this)">5 KG</button>
-            <button class="cat-size-pill" onclick="changeProductSize('fino', '10kg', 'assets/catalogo/cuerito-fino-10kg.jpg', this)">10 KG</button>
+            <button class="cat-size-pill active" onclick="changeProductSize('fino', '1kg', 'assets/catalogo/cuerito-fino-1kg.jpg', this)">1 KG</button>
+            <button class="cat-size-pill" onclick="changeProductSize('fino', '5kg', 'assets/catalogo/cuerito-fino-5kg.jpg', this)">5 KG</button>
           </div>
         </div>
         <div class="cat-card-body">
           <h3>Cuerito Corte Fino</h3>
           <p class="cat-desc">Cuadritos pequeños de cuerito con zanahoria picada. El corte predilecto para tostadas, vasos botaneros y chicharrones preparados gracias a su distribución uniforme.</p>
           <ul class="cat-spec-list">
-            <li><span>Presentación activa:</span> <strong id="spec-weight-fino">5 Kilogramos</strong></li>
+            <li><span>Presentación activa:</span> <strong id="spec-weight-fino">1 Kilogramo</strong></li>
+            <li><span>Presentaciones disponibles:</span> <strong>1 KG y 5 KG</strong></li>
             <li><span>Tipo de corte:</span> <strong>Cuadro fino uniforme</strong></li>
             <li><span>Ingredientes:</span> <strong>Piel de cerdo, vinagre, sal, zanahoria</strong></li>
             <li><span>Conservación:</span> <strong>Manténgase en refrigeración (≤10°C)</strong></li>
             <li><span>Código de barras:</span> <strong id="spec-barcode-fino">7500465505117</strong></li>
           </ul>
           <div class="cat-card-footer">
-            <a class="cat-btn-wa-card" id="wa-btn-fino" href="https://wa.me/528115187738?text=Hola%2C%20Empacadora%20RyS.%20Me%20comunico%20para%20solicitar%20informaci%C3%B3n%20y%20cotizaci%C3%B3n%20de%20Cuerito%20en%20Vinagre%20Corte%20Fino%20en%20presentaci%C3%B3n%20de%205%20KG." target="_blank" rel="noopener noreferrer">
-              Solicitar Info Corte Fino (5 KG) ↗
+            <a class="cat-btn-wa-card" id="wa-btn-fino" href="https://wa.me/528115187738?text=Hola%2C%20Empacadora%20RyS.%20Me%20comunico%20para%20solicitar%20informaci%C3%B3n%20y%20cotizaci%C3%B3n%20de%20Cuerito%20en%20Vinagre%20Corte%20Fino%20en%20presentaci%C3%B3n%20de%201%20KG." target="_blank" rel="noopener noreferrer">
+              Solicitar Info Corte Fino (1 KG) ↗
             </a>
           </div>
         </div>
       </article>
 
       <!-- PRODUCTO 2: CORTE MEDIANO -->
-      <article class="cat-card" data-category="mediano" id="card-mediano">
+      <article class="cat-card" data-category="mediano" data-available-sizes="1kg" id="card-mediano">
         <div class="cat-card-header">
           <span class="cat-sku">SKU: RYS-CV-MED</span>
           <span class="cat-tag-origin">100% MEXICANO · TIF</span>
         </div>
         <div class="cat-gallery-container">
           <div class="cat-main-img-box" onclick="openZoom('cuerito-mediano', 'Cuerito en Vinagre · Corte Mediano')">
-            <img id="img-mediano" src="assets/catalogo/cuerito-mediano-5kg.jpg" alt="Cuerito en vinagre corte mediano Empacadora RyS">
+            <img id="img-mediano" src="assets/catalogo/cuerito-mediano-1kg.jpg" alt="Cuerito en vinagre corte mediano Empacadora RyS">
           </div>
           <div class="cat-size-selector">
-            <button class="cat-size-pill" onclick="changeProductSize('mediano', '1kg', 'assets/catalogo/cuerito-mediano-1kg.jpg', this)">1 KG</button>
-            <button class="cat-size-pill active" onclick="changeProductSize('mediano', '5kg', 'assets/catalogo/cuerito-mediano-5kg.jpg', this)">5 KG</button>
-            <button class="cat-size-pill" onclick="changeProductSize('mediano', '10kg', 'assets/catalogo/cuerito-mediano-10kg.jpg', this)">10 KG</button>
+            <button class="cat-size-pill active" onclick="changeProductSize('mediano', '1kg', 'assets/catalogo/cuerito-mediano-1kg.jpg', this)">1 KG (Única Presentación)</button>
           </div>
         </div>
         <div class="cat-card-body">
           <h3>Cuerito Corte Mediano</h3>
           <p class="cat-desc">Cuadros medianos tradicionales con textura firme y mordida crocante. Mezclado con cubos de zanahoria encurtida en vinagre sazonado tradicional.</p>
           <ul class="cat-spec-list">
-            <li><span>Presentación activa:</span> <strong id="spec-weight-mediano">5 Kilogramos</strong></li>
+            <li><span>Presentación activa:</span> <strong id="spec-weight-mediano">1 Kilogramo</strong></li>
+            <li><span>Presentación disponible:</span> <strong>Exclusiva 1 KG</strong></li>
             <li><span>Tipo de corte:</span> <strong>Cuadro estándar comercial</strong></li>
             <li><span>Ingredientes:</span> <strong>Piel de cerdo, vinagre, sal, zanahoria</strong></li>
             <li><span>Conservación:</span> <strong>Manténgase en refrigeración (≤10°C)</strong></li>
             <li><span>Código de barras:</span> <strong id="spec-barcode-mediano">7502251481384</strong></li>
           </ul>
           <div class="cat-card-footer">
-            <a class="cat-btn-wa-card" id="wa-btn-mediano" href="https://wa.me/528115187738?text=Hola%2C%20Empacadora%20RyS.%20Me%20comunico%20para%20solicitar%20informaci%C3%B3n%20y%20cotizaci%C3%B3n%20de%20Cuerito%20en%20Vinagre%20Corte%20Mediano%20en%20presentaci%C3%B3n%20de%205%20KG." target="_blank" rel="noopener noreferrer">
-              Solicitar Info Corte Mediano (5 KG) ↗
+            <a class="cat-btn-wa-card" id="wa-btn-mediano" href="https://wa.me/528115187738?text=Hola%2C%20Empacadora%20RyS.%20Me%20comunico%20para%20solicitar%20informaci%C3%B3n%20y%20cotizaci%C3%B3n%20de%20Cuerito%20en%20Vinagre%20Corte%20Mediano%20en%20presentaci%C3%B3n%20de%201%20KG." target="_blank" rel="noopener noreferrer">
+              Solicitar Info Corte Mediano (1 KG) ↗
             </a>
           </div>
         </div>
       </article>
 
       <!-- PRODUCTO 3: CORTE ENTERO -->
-      <article class="cat-card" data-category="entero" id="card-entero">
+      <article class="cat-card" data-category="entero" data-available-sizes="5kg" id="card-entero">
         <div class="cat-card-header">
           <span class="cat-sku">SKU: RYS-CV-ENT</span>
           <span class="cat-tag-origin">100% MEXICANO · TIF</span>
@@ -908,9 +907,7 @@
             <img id="img-entero" src="assets/catalogo/cuerito-entero-5kg.jpg" alt="Cuerito en vinagre corte entero Empacadora RyS">
           </div>
           <div class="cat-size-selector">
-            <button class="cat-size-pill" onclick="changeProductSize('entero', '1kg', 'assets/catalogo/cuerito-entero-1kg.jpg', this)">1 KG</button>
-            <button class="cat-size-pill active" onclick="changeProductSize('entero', '5kg', 'assets/catalogo/cuerito-entero-5kg.jpg', this)">5 KG</button>
-            <button class="cat-size-pill" onclick="changeProductSize('entero', '10kg', 'assets/catalogo/cuerito-entero-10kg.jpg', this)">10 KG</button>
+            <button class="cat-size-pill active" onclick="changeProductSize('entero', '5kg', 'assets/catalogo/cuerito-entero-5kg.jpg', this)">5 KG (Única Presentación)</button>
           </div>
         </div>
         <div class="cat-card-body">
@@ -918,10 +915,11 @@
           <p class="cat-desc">Láminas enteras y cortes amplios de piel de cerdo cocida con zanahoria encurtida. Formato de alto rendimiento para negocios que requieren porcionar según su propia receta.</p>
           <ul class="cat-spec-list">
             <li><span>Presentación activa:</span> <strong id="spec-weight-entero">5 Kilogramos</strong></li>
+            <li><span>Presentación disponible:</span> <strong>Exclusiva 5 KG</strong></li>
             <li><span>Tipo de corte:</span> <strong>Láminas enteras amplias</strong></li>
             <li><span>Ingredientes:</span> <strong>Piel de cerdo, vinagre, sal, zanahoria</strong></li>
             <li><span>Conservación:</span> <strong>Manténgase en refrigeración (≤10°C)</strong></li>
-            <li><span>Código de barras:</span> <strong id="spec-barcode-entero">7500465505117</strong></li>
+            <li><span>Código de barras:</span> <strong id="spec-barcode-entero">7502255840644</strong></li>
           </ul>
           <div class="cat-card-footer">
             <a class="cat-btn-wa-card" id="wa-btn-entero" href="https://wa.me/528115187738?text=Hola%2C%20Empacadora%20RyS.%20Me%20comunico%20para%20solicitar%20informaci%C3%B3n%20y%20cotizaci%C3%B3n%20de%20Cuerito%20en%20Vinagre%20Corte%20Entero%20en%20presentaci%C3%B3n%20de%205%20KG." target="_blank" rel="noopener noreferrer">
@@ -959,8 +957,8 @@
           <tbody>
             <tr>
               <td><strong>Corte Fino</strong></td>
-              <td>1 KG · 5 KG · 10 KG</td>
-              <td>Bolsa sellada al vacío / Bolsa alimentaria con cincho</td>
+              <td>1 KG · 5 KG</td>
+              <td>Bolsa sellada al vacío (1 KG) / Bolsa con cincho (5 KG)</td>
               <td>6 meses</td>
               <td>2°C a 6°C (Refrigeración)</td>
               <td>Aprox. 60-65% peso neto</td>
@@ -968,8 +966,8 @@
             </tr>
             <tr>
               <td><strong>Corte Mediano</strong></td>
-              <td>1 KG · 5 KG · 10 KG</td>
-              <td>Bolsa sellada al vacío / Bolsa alimentaria con cincho</td>
+              <td>1 KG (Exclusiva)</td>
+              <td>Bolsa sellada al vacío</td>
               <td>6 meses</td>
               <td>2°C a 6°C (Refrigeración)</td>
               <td>Aprox. 60-65% peso neto</td>
@@ -977,8 +975,8 @@
             </tr>
             <tr>
               <td><strong>Corte Entero</strong></td>
-              <td>1 KG · 5 KG · 10 KG</td>
-              <td>Bolsa sellada al vacío / Bolsa alimentaria con cincho</td>
+              <td>5 KG (Exclusiva)</td>
+              <td>Bolsa termo-sellada con cincho</td>
               <td>6 meses</td>
               <td>2°C a 6°C (Refrigeración)</td>
               <td>Aprox. 60-65% peso neto</td>
@@ -1025,11 +1023,11 @@
   </div>
 
   <script>
-    // Códigos de barra según corte y peso
+    // Códigos de barra exactos según corte y peso solicitados
     const productBarcodes = {
-      fino: { '1kg': '750025483384', '5kg': '7500465505117', '10kg': '7502251481384' },
-      mediano: { '1kg': '7500251481384', '5kg': '7502251481384', '10kg': '7502251481384' },
-      entero: { '1kg': '7500465505117', '5kg': '7500465505117', '10kg': '7500465505117' }
+      fino: { '1kg': '7500465505117', '5kg': '7500465505131' },
+      mediano: { '1kg': '7502251481384' },
+      entero: { '5kg': '7502255840644' }
     };
 
     // Cambiar presentación en tarjeta individual
@@ -1048,7 +1046,7 @@
       const barcodeEl = document.getElementById(`spec-barcode-${corte}`);
       const waBtn = document.getElementById(`wa-btn-${corte}`);
 
-      const sizeLabel = size === '1kg' ? '1 Kilogramo' : (size === '5kg' ? '5 Kilogramos' : '10 Kilogramos');
+      const sizeLabel = size === '1kg' ? '1 Kilogramo' : '5 Kilogramos';
       const sizeTag = size.toUpperCase();
 
       if (weightEl) weightEl.textContent = sizeLabel;
@@ -1082,16 +1080,22 @@
       });
     });
 
-    // Selector global de tamaño (1kg, 5kg, 10kg)
+    // Filtro global por presentación (Todas, 1kg, 5kg)
     document.querySelectorAll('[data-global-size]').forEach(btn => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('[data-global-size]').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         const size = btn.dataset.globalSize;
 
-        ['fino', 'mediano', 'entero'].forEach(corte => {
-          const pill = document.querySelector(`#card-${corte} .cat-size-pill[onclick*="${size}"]`);
-          if (pill) pill.click();
+        document.querySelectorAll('.cat-card').forEach(card => {
+          const available = card.dataset.availableSizes ? card.dataset.availableSizes.split(',') : [];
+          if (size === 'all' || available.includes(size)) {
+            card.style.display = 'flex';
+            const pill = card.querySelector(`.cat-size-pill[onclick*="${size}"]`);
+            if (pill) pill.click();
+          } else {
+            card.style.display = 'none';
+          }
         });
       });
     });
